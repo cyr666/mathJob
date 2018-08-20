@@ -1,0 +1,26 @@
+<!--index.wxml-->
+<view class = "index_con">
+  <swiper class="swiper" indicator-dots="true" autoplay="true" interval="5000" duration="1000"> 
+    <block wx:for="{{movies}}" wx:for-index="index">  
+      <swiper-item>  
+        <image src="{{item.url}}" class="slide-image" mode="aspectFill"/>  
+      </swiper-item>  
+    </block>  
+  </swiper>
+  <view class = "course_con">
+    <view class = "onlineCourse">在线课程</view>
+    <view class = "course_box">
+      <view class = "course_item">
+        <image src="" class = "course_img"></image>
+        <view class = "course_middle">
+          <view class = "course_title">七年级(上)数学学霸尖子班</view>
+          <view class = "student_num">9866人在学</view>
+        </view>
+        <view class = "course_right" wx:if="{{show}}">去听课</view>
+        <view class = "course_right" wx:else>￥999</view>
+      </view>
+    </view>
+  </view>
+</view>
+<import src="../tabbar/tabbar.wxml"/>
+<template is="tabbar" data="{{tabbar}}"/>

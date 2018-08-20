@@ -1,0 +1,62 @@
+/**index.wxss**/
+/* swiper */
+.swiper {
+  height: 400rpx;
+  width: 100%;
+}
+.swiper image {
+  height: 100%;
+  width: 100%;
+}
+.onlineCourse{
+  font-size: 32rpx;
+  color: #000;
+  height: 106rpx;
+  line-height: 106rpx;
+  box-sizing: border-box;
+  padding-left: 30rpx;
+  background: #EEECEC;
+  margin-top: 44rpx;
+}
+
+/* 课程内容 */
+.course_box{
+  box-sizing: border-box;
+  /* padding: 30rpx; */
+}
+.course_item{
+  display: flex;
+  box-sizing: border-box;
+  padding: 30rpx;
+  border-bottom: 1px solid #dbdbdb;
+}
+.course_img{
+  float: left;
+  width: 140rpx;
+  height: 140rpx;
+  border: 1px solid #888;
+}
+.course_middle{
+  float: left;
+  width: 410rpx;
+  height: 140rpx;
+  position: relative;
+  margin-left: 20rpx;
+}
+.course_right{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32rpx;
+  color: #008EFF;
+}
+.course_title{
+  font-size: 32rpx;
+  color: #101010;
+}
+.student_num{
+  font-size: 28rpx;
+  color: #9D9393;
+  position: absolute;
+  bottom: 10rpx;
+}
