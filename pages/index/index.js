@@ -9,7 +9,8 @@ Page({
       { url: 'http://p7b85tdui.bkt.clouddn.com/swiper2.png' },
       { url: 'http://p7b85tdui.bkt.clouddn.com/swiper3.png' },
     ] ,
-    show:true
+    show:true,
+    courseList:[]
   },
   //事件处理函数
   bindViewTap: function() {
@@ -52,8 +53,21 @@ Page({
       url: app.globalData.serverUrl +'subject_list.php',
       data:{},
       success:(res)=>{
-        console.log(res)
+        if (res.statusCode == 200){
+          this.setData({
+            courseList:res.data
+          })
+        }
       }
+    })
+  },
+  //跳到课程详情页
+  goCourseDetail(e){
+    console.log(e)
+    let courseId = e.currentTarget.dataset.id;
+    let title = e.currentTarget.dataset.title;
+    wx.navigateTo({
+      url: '../courseDetail/courseDetail?id=' + courseId+'&title='+title,
     })
   },
   // getUserInfo: function(e) {

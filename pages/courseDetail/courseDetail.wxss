@@ -1,0 +1,68 @@
+.courseDetail_con{
+  box-sizing: border-box;
+  padding: 0 15rpx;
+}
+.courseDetail_top{
+  width: 720rpx;
+  height: 400rpx;
+}
+.courseDetail_img{
+  width: 720rpx;
+  height: 400rpx;
+}
+.abstract_con{
+  box-sizing: border-box;
+  padding: 20rpx 15rpx;
+}
+.abstract_title{
+  box-sizing: border-box;
+  padding-left: 30rpx;
+  width: 690rpx;
+  height: 56rpx;
+  background: #EEECEC;
+  font-size: 28rpx;
+  line-height: 56rpx;
+}
+.abstract_text{
+  font-size: 28rpx;
+  color: #000;
+  line-height: 48rpx;
+}
+.chapter_con{
+  box-sizing: border-box;
+  padding: 0rpx 15rpx;
+  overflow: hidden;
+  border-bottom: 1px solid #ccc;
+}
+.chapter_title{
+  height: 68rpx;
+}
+.chapter_word{
+  float: left;
+  font-size: 30rpx;
+  color: #000;
+  line-height: 68rpx;
+}
+.more_icon{
+  float: right;
+  width: 34rpx;
+  height:20rpx;
+  margin-top: 24rpx;
+}
+.secondChapter{
+  box-sizing: border-box;
+  padding:0 0 20rpx 20rpx;
+}
+.paly_icon{
+  width: 32rpx;
+  height: 34rpx;
+  margin-right: 10rpx;
+  vertical-align: middle;
+}
+.secondChapter_title{
+  font-size: 28rpx;
+  color: #3F51B5;
+}
+.onlyStyle{
+  height: outo;
+}

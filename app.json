@@ -1,6 +1,8 @@
 {
   "pages":[
+
     "pages/index/index",
+    "pages/courseDetail/courseDetail",
     "pages/personal/personal"
   ],
   "window":{

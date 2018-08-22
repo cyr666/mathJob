@@ -1,0 +1,23 @@
+<view class = "courseDetail_con">
+  <view class = "courseDetail_top">
+    <image src="http://p7b85tdui.bkt.clouddn.com/swiper1.png" class = "courseDetail_img"></image>
+  </view>
+  <view class = "abstract_con">
+    <view class = "abstract_title" wx:if="{{brief}}">简介</view>
+    <view class = "abstract_text">{{brief}}</view>
+    <view class = "abstract_title">章节</view>
+    <view style="margin-top: 20rpx;">
+      <view class='chapter_con' wx:for="{{chapter}}">
+        <view class="chapter_title">
+          <text class = "chapter_word">{{item.name}}</text>
+          <image src="../../resource/more.png" class = "more_icon" bindtap='showSecond' data-id="{{item.id}}" wx:if="{{item.id!==secondChapterId}}"></image>
+          <image src="../../resource/stop.png" class = "more_icon" bindtap='hiddenSecond' data-id="{{item.id}}" wx:else></image>
+        </view>
+        <view class = "secondChapter" wx:for="{{item.video}}" wx:for-item="obj" wx:if="{{item.id==secondChapterId}}">
+          <image src = "../../resource/play_icon.jpg" class = "paly_icon"></image><text class = "secondChapter_title">{{obj.title}}
+</text>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
