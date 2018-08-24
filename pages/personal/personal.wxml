@@ -1,2 +1,39 @@
 <import src="../tabbar/tabbar.wxml"/>
 <template is="tabbar" data="{{tabbar}}"/>
+
+<import src="../tabbar/tabbar.wxml"/>
+<template is="tabbar" data="{{tabbar}}"/>
+<!-- 用户信息 -->
+<view class = "personal_con">
+  <view class = "avatarUrl_con">
+   <image src="{{avatarUrl}}" class = "avatarUrl_img"></image>
+  </view>
+  <view class = "nickName" wx:if="{{nickName}}">{{nickName}}</view>
+  <view class = "unlisted" wx:else> 
+    <view class = "btn_con">
+      <button class = "log_word" open-type="getUserInfo" lang="zh_CN" bindgetuserinfo="handleLogin">登录</button>
+    </view>
+    <view class = "unlisted_bot">登录后即可享用更多功能</view>
+  </view>
+</view>
+
+<!-- 关于我的 公司 信息 -->
+
+<view class = "first_con">
+  <view class = "list_item" bindtap='buyCourseHis'>
+    <text class = "icon_title">我的订单</text>
+    <image src="http://p7b85tdui.bkt.clouddn.com/share5.png" class = "jiantou"></image>
+  </view>
+  <view class = "list_item" bindtap='myFollow'>
+    <text class = "icon_title">我的优惠券</text>
+    <image src="http://p7b85tdui.bkt.clouddn.com/share5.png" class = "jiantou"></image>
+  </view>
+  <view class = "list_item" bindtap='myFollow'>
+    <text class = "icon_title">用户反馈</text>
+    <image src="http://p7b85tdui.bkt.clouddn.com/share5.png" class = "jiantou"></image>
+  </view>
+  <view class = "list_item" style="border: none" bindtap='myFollow'>
+    <text class = "icon_title">关于我们</text>
+    <image src="http://p7b85tdui.bkt.clouddn.com/share5.png" class = "jiantou"></image>
+  </view>
+</view>

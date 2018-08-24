@@ -9,7 +9,8 @@ Page({
     courseId:'',
     brief:'',
     chapter:[],
-    secondChapterId:0
+    secondChapterId:0,
+    hidden:true
   },
 
   /**
@@ -52,6 +53,89 @@ Page({
   hiddenSecond(){
     this.setData({
       secondChapterId: 0
+    })
+  },
+  /*处理用户登录 */
+  handleLogin(e){
+    let that = this;
+    console.log(e)
+    wx.login({
+      success: function (res) {
+        console.log(res)
+        // console.log(res)
+        // app.globalData.code = res.code
+        // wx.getUserInfo({
+        //   withCredentials: true,
+        //   lang: '',
+        //   success: function (res) {
+        //     app.globalData.nickName = res.userInfo.nickName;
+        //     app.globalData.avatarUrl = res.userInfo.avatarUrl;
+        //     wx.request({
+        //       url: app.globalData.serverUrl + 'piionee/industry/smallApp/beforeSign',
+        //       data: {
+        //         code: app.globalData.code,
+        //       },
+        //       success: (res) => {
+        //         if (res.data.status == 0) {
+        //           app.globalData.openid = res.data.openId;
+        //           if (!res.data.is_user) {
+        //             wx.request({
+        //               url: app.globalData.serverUrl + 'piionee/industry/smallApp/sign',
+        //               data: {
+        //                 account: app.globalData.openid,
+        //                 nickName: app.globalData.nickName,
+        //                 cover: app.globalData.avatarUrl
+        //               },
+        //               success: (res) => {
+        //                 if (res.data.status == 0) {
+        //                   if (res.data.is_success) {
+        //                     app.globalData.is_user = res.data.is_user;
+        //                     app.globalData.user_id = res.data.user_id;
+        //                     that.setData({
+        //                       avatarUrl: app.globalData.avatarUrl,
+        //                       nickName: app.globalData.nickName
+        //                     })
+        //                   }
+        //                 }
+        //               }
+        //             })
+        //           }
+        //         }
+        //       }
+        //     })
+        //   },
+        //   fail: function (res) { console.log(res) },
+        //   complete: function (res) { },
+        // })
+
+      }
+    });
+  },
+  /*处理视频播放*/
+  handlePlayVideo(e){
+    console.log(e)
+  } ,
+  /*处理用户购买*/
+  handleBuy(e) {
+    if (!app.globalData.is_user) {
+      this.setData({
+        hidden: false
+      })
+    } else {
+      
+    }
+  },
+  confirm() {
+    this.setData({
+      hidden: true
+    })
+    wx.navigateTo({
+      url: '../personal/personal',
+    })
+  },
+  cancel() {
+    this.setData({
+      hidden: true
     })
   },
   /**

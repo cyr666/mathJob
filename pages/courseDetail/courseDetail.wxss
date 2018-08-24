@@ -1,6 +1,7 @@
 .courseDetail_con{
   box-sizing: border-box;
   padding: 0 15rpx;
+  position: relative;
 }
 .courseDetail_top{
   width: 720rpx;
@@ -65,4 +66,15 @@
 }
 .onlyStyle{
   height: outo;
+}
+.buyButton{
+  position: fixed;
+  bottom: 0rpx;
+  width: 720rpx;
+  height: 90rpx;
+  text-align: center;
+  line-height: 90rpx;
+  font-size: 40rpx;
+  color: #fff;
+  background: #3F51B5;
 }

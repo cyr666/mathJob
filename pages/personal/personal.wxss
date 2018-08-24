@@ -1,0 +1,117 @@
+page{
+  background: #f4f4f4;
+}
+.instruction{
+  box-sizing: border-box;
+  padding-bottom: 40rpx;
+}
+modal{
+  overflow: hidden;
+}
+/* button{
+  float: left;
+  width: 48%;
+} */
+.btns{
+  overflow: hidden;
+}
+.noBtn{
+  margin-right: 2%;
+}
+.yesBtn{
+  color: #008EFF;
+}
+.personal_con{
+  overflow: hidden;
+  height: 176rpx;
+  width:100%;
+  background: #fff;
+  box-sizing: border-box;
+  padding: 32rpx 30rpx;
+  margin-top: 20rpx;
+}
+.avatarUrl_con{
+  float: left;
+  width: 112rpx;
+  height: 112rpx;
+  margin-right: 30rpx;
+  border-radius: 55rpx;
+}
+.avatarUrl_img{
+  width: 112rpx;
+  height: 112rpx;
+  border-radius: 55rpx;
+}
+.nickName{
+  float: left;
+  font-size: 40rpx;
+  color: #000;
+  margin-top: 28rpx;
+}
+.unlisted{
+  float: left;
+  margin-top: 11rpx;
+}
+.log_word{
+  font-size: 36rpx;
+  color: #008EFF;
+  line-height:50rpx;
+}
+button{
+  display: inline-block;
+  border: none;
+  padding: 0;
+  margin: 0;
+  background: #fff;
+  border-radius: 0px;
+}
+button::after{
+  border:none;
+  padding: 0;
+}
+.button-hover{
+  background:#fff; 
+}
+.unlisted_bot{
+  font-size: 24rpx;
+  color: #999999;
+  line-height:33rpx;
+}
+/* 公司信息 */
+.first_con{
+  box-sizing: border-box;
+  padding: 0 0 0 30rpx;
+  background: #fff;
+  margin-top: 40rpx;
+}
+.list_item{
+  height: 88rpx;
+  border-bottom: 1px solid #E5E5E5;
+}
+.icon,.icon_title{
+  margin-top: 23rpx;
+}
+.icon,.icon_title{
+  float: left;
+}
+.icon{
+  width: 40rpx;
+  height: 40rpx;
+  margin-right: 20rpx;
+}
+.jiantou{
+  float: right;
+  width: 16rpx;
+  height: 26rpx;
+  margin: 30rpx 30rpx 0 0;
+}
+.icon_title{
+  font-size: 30rpx;
+  color: #353535;
+}
+.share_title{
+  float: right;
+  font-size: 24rpx;
+  color: #9A9A9A;
+  margin: 28rpx 20rpx 0 0;
+}

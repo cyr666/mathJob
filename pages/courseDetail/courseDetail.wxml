@@ -13,11 +13,22 @@
           <image src="../../resource/more.png" class = "more_icon" bindtap='showSecond' data-id="{{item.id}}" wx:if="{{item.id!==secondChapterId}}"></image>
           <image src="../../resource/stop.png" class = "more_icon" bindtap='hiddenSecond' data-id="{{item.id}}" wx:else></image>
         </view>
-        <view class = "secondChapter" wx:for="{{item.video}}" wx:for-item="obj" wx:if="{{item.id==secondChapterId}}">
-          <image src = "../../resource/play_icon.jpg" class = "paly_icon"></image><text class = "secondChapter_title">{{obj.title}}
-</text>
+        <view class = "secondChapter" 
+              wx:for="{{item.video}}" 
+              wx:for-item="obj" 
+              wx:if="{{item.id==secondChapterId}}"
+              bindtap="handlePlayVideo"
+              data-src="{{obj.url}}"
+        >
+              
+              <image src = "../../resource/play_icon.jpg" class = "paly_icon"></image><text class = "secondChapter_title">{{obj.title}}</text>
         </view>
       </view>
     </view>
   </view>
+  <button class = "buyButton" open-type="getUserInfo" lang="zh_CN" bindgetuserinfo="handleBuy">购买</button>
 </view>
+
+<modal hidden="{{hidden}}" title="提示" confirm-text="确定"  bindconfirm="confirm" no-cancel="{{nocancel}}" cancel-text="取消" bindcancel="cancel"catchtouchmove='true'>
+    您暂未登录高斯数学小程序，请您到我的里面进行登录！
+</modal>

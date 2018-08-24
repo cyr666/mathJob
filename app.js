@@ -72,5 +72,6 @@ App({
       ],
       position: "bottom"
     },
+    is_user:false
   }
 })
